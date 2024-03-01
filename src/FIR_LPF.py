@@ -24,7 +24,7 @@ class Params:
     Fs = 40
     fp = 3/Fs
     fs = 9/Fs
-    filter_order = 20
+    filter_order = 10
     delta = 0.5
     freq = np.linspace(0,1,N)
     def __init__(self):
