@@ -99,13 +99,12 @@ class Filter(Params):
     
     
     
-    
 class Display:
     
     
-    def __init__(self, H, h):
+    def __init__(self, H, h, msg):
     
-        
+        self.msg = msg
         self.display_IPR(h)
         self.display_IPR_H(H)
         self.display_phase(H)
@@ -122,7 +121,7 @@ class Display:
         matplotlib.rc('axes', titlesize = 16)
         #plt.rcParams['figure.dpi'] = 300
         #plt.rcParams['savefig.dpi'] = 300
-        plt.title(f'$FIR\;\;Low\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
+        plt.title(f'$FIR\;\;{msg}\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
         #plt.savefig('FIR_LPF.png')
         plt.tight_layout()
         plt.show()
@@ -132,8 +131,8 @@ class Display:
         H = abs(H)
         plt.figure()
         plt.plot(Params.freq*Params.Fs, 20*np.log10(H), 'k', lw = 3)
-        plt.plot(Params.freq*Params.Fs, 0.5*np.ones(len(H)), 'r--', lw = 1)
-        plt.plot(Params.freq*Params.Fs, -0.5*np.ones(len(H)), 'r--', lw = 1)
+        #plt.plot(Params.freq*Params.Fs, 0.5*np.ones(len(H)), 'r--', lw = 1)
+        #plt.plot(Params.freq*Params.Fs, -0.5*np.ones(len(H)), 'r--', lw = 1)
         plt.grid()
         plt.xlabel('$Frequency\;\; [Hz]$', FontSize = 16)
         plt.ylabel('$20\;log\;|H(f)|\;\;[dB]$', FontSize = 16)
@@ -141,7 +140,7 @@ class Display:
         matplotlib.rc('axes', titlesize = 16)
         #plt.rcParams['figure.dpi'] = 300
         #plt.rcParams['savefig.dpi'] = 300
-        plt.title(f'$FIR\;\;Low\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
+        plt.title(f'$FIR\;\;{msg}\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
         plt.xlim(0,Params.Fs//2)
         #plt.savefig('FIR_LPF.png')
         plt.tight_layout()
@@ -162,7 +161,7 @@ class Display:
         matplotlib.rc('axes', titlesize = 16)
         #plt.rcParams['figure.dpi'] = 300
         #plt.rcParams['savefig.dpi'] = 300
-        plt.title(f'$FIR\;\;Low\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
+        plt.title(f'$FIR\;\;{self.msg}\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
         plt.xlim(0,Params.Fs//2)
         #plt.savefig('FIR_LPF.png')
         plt.tight_layout()
@@ -172,10 +171,11 @@ class Display:
     
     
 if __name__ == '__main__':
-    
+
+    msg = 'Low'
     Params()
     opt = Opt()
     h = opt._run()
     h, H = Filter.impulse_response(h)
-
-    Display(H, h)
+    
+    Display(H, h, msg)

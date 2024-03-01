@@ -166,7 +166,7 @@ class Display:
         matplotlib.rc('axes', titlesize = 16)
         #plt.rcParams['figure.dpi'] = 300
         #plt.rcParams['savefig.dpi'] = 300
-        plt.title(f'$FIR\;\;{msg}\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
+        plt.title(f'$FIR\;\;{self.msg}\; Pass\; Filter, \;\;\;\; n = {Params.filter_order}$')
         plt.xlim(0,Params.Fs//2)
         #plt.savefig('FIR_LPF.png')
         plt.tight_layout()
