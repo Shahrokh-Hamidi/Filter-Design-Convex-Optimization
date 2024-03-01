@@ -20,6 +20,15 @@
 ![FIR_BPF](https://github.com/Shahrokh-Hamidi/Filter_Design_Convex_Optimization/assets/156338354/eefa76c3-9f4c-4b1e-b0d2-af2b6f40fb35)
 
 
+- 
+-
+-
+- High Pass Filter Example:
+- 
+
+  
+![FIR_HPF](https://github.com/Shahrokh-Hamidi/Filter_Design_Convex_Optimization/assets/156338354/31358fcc-cce5-46aa-949e-e76da9b13194)
+
 
 
 References:
