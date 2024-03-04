@@ -29,6 +29,13 @@
   
 ![FIR_HPF](https://github.com/Shahrokh-Hamidi/Filter_Design_Convex_Optimization/assets/156338354/31358fcc-cce5-46aa-949e-e76da9b13194)
 
+-
+-
+-
+- Bans Stop Filter Example:
+
+![FIR_BSF](https://github.com/Shahrokh-Hamidi/Filter_Design_Convex_Optimization/assets/156338354/e4c35aef-bad5-4a35-9408-8a14781d5aaa)
+
 
 
 References:
