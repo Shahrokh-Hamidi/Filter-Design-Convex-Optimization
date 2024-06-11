@@ -2,6 +2,9 @@
 # PhD., Electrical & Computer Engineering, University of Waterloo
 # Waterloo, ON., Canada
 
+# shahrokh.hamidi@uwaterloo.ca
+# shahrokh.hamidi@gmail.com
+
 
 
 
