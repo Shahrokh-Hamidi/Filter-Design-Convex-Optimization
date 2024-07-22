@@ -1,4 +1,4 @@
-- This repository is the implementation of FIR Filters based on Chebychev design.
+- This repository is the implementation of FIR Filters based on Chebyshev design.
 - The approach is based on convex optimization
 - The library has been coded in Python3.
 - 
